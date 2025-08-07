@@ -9,6 +9,7 @@ import io
 import os
 from datetime import datetime, timedelta
 import uuid
+from vercel_wsgi import handle_request
 
 app = Flask(__name__)
 CORS(app)  # Permitir CORS para desarrollo local
