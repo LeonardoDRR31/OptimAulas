@@ -384,3 +384,6 @@ if __name__ == '__main__':
     print("📊 Para probar: http://localhost:5000")
     print("⏹️  Para detener: Ctrl+C")
     app.run(debug=True, host='localhost', port=5000)
+# Handler para Vercel
+def handler(request, context):
+    return handle_request(app, request, context)
