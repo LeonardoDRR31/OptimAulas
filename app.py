@@ -9,7 +9,6 @@ import io
 import os
 from datetime import datetime, timedelta
 import uuid
-from vercel_wsgi import handle_request
 
 app = Flask(__name__)
 CORS(app)  # Permitir CORS para desarrollo local
@@ -384,6 +383,3 @@ if __name__ == '__main__':
     print("📊 Para probar: http://localhost:5000")
     print("⏹️  Para detener: Ctrl+C")
     app.run(debug=True, host='localhost', port=5000)
-# Handler para Vercel
-def handler(request, context):
-    return handle_request(app, request, context)
