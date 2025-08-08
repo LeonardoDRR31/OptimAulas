@@ -28,8 +28,8 @@ app.register_blueprint(download_bp)
 
 # Punto de entrada principal
 if __name__ == '__main__':
-    print("🚀 Iniciando OptimAulas UNS - Servidor Local")
-    print("📍 URL: http://localhost:5000")
-    print("📊 Endpoint de prueba: http://localhost:5000/status")
+    print("🚀 Iniciando OptimAulas UNS - Servidor en Cloud Run")
+    print("📍 URL: http://0.0.0.0:8080")
+    print("📊 Endpoint de prueba: http://0.0.0.0:8080/status")
     print("⏹️  Para detener: Ctrl+C")
-    app.run(debug=True, host='localhost', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=8080)
